@@ -1,0 +1,24 @@
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1$ mkdir A
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1$ cd A
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/A$ git init
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/A$ echo '' > fileA.txt
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/A$ echo '' > fileB.txt
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/A$ git add .
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/A$ git commit 
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/A$ git checkout -b branch1
+Switched to a new branch 'branch1'
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/A$ git checkout master 
+M	fileA.txt
+M	fileB.txt
+Switched to branch 'master'
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/A$ git clone . ../B
+Cloning into '../B'...
+done.
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/A$ cd ../B
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/B$ git checkout branch1 
+Already on 'branch1'
+Your branch is up-to-date with 'origin/branch1'.
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/B$ echo '' > fileC.txt
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/B$ git add .
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/B$ git commit 
+andrew@HP-ENVY-m6-Notebook-PC:~/Desktop/hh/git/lab1/B$ git push ../A branch1 
